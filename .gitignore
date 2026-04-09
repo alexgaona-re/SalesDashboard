@@ -1,0 +1,9 @@
+node_modules/
+.env
+__pycache__/
+*.pyc
+backend/agent_config.json
+frontend/dist/
+frontend/node_modules/
+.vite/
+venv/
