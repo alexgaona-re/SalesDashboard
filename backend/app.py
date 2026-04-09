@@ -34,7 +34,7 @@ from config import (
 # Bootstrap
 # ---------------------------------------------------------------------------
 
-load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env", override=True)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
