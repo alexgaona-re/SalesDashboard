@@ -3,6 +3,16 @@
   command = "npm install && npm run build"
   publish = "dist"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# API routes must come BEFORE the SPA catch-all redirect
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
